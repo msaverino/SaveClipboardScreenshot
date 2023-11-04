@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaveClipboardScreenshot.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace SaveClipboardScreenshot
 {
-    public partial class Form1 : Form
+    public partial class ClipboardToScreenshot : Form
     {
-        public Form1()
+        public ClipboardToScreenshot()
         {
             InitializeComponent();
+        }
+
+        private void Label_Suffix_DoubleClick(object sender, EventArgs e)
+        {
+            Documentation.OpenConfigurationPage();
         }
     }
 }
