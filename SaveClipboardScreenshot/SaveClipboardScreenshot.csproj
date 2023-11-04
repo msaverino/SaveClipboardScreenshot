@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Classes\Configuration.cs" />
     <Compile Include="Classes\Documentation.cs" />
+    <Compile Include="Classes\Settings.cs" />
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
     </Compile>

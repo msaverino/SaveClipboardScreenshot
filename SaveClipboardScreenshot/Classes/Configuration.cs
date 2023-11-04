@@ -10,7 +10,7 @@ namespace SaveClipboardScreenshot.Classes
 {
     internal class Configuration
     {
-        internal static ConfigurationModel Config = new ConfigurationModel();
+        private static ConfigurationModel Config = new ConfigurationModel();
 
         internal static void LoadConfiguration()
         {
@@ -37,6 +37,33 @@ namespace SaveClipboardScreenshot.Classes
             string executablePath = AppDomain.CurrentDomain.BaseDirectory;
             string configurationFilePath = Path.Combine(executablePath, "Configuration", "Configuration.json");
             return configurationFilePath;
+        }
+
+        internal static string GetSuffix() => 
+            Config.Suffix;
+
+        internal static string GetDirectory() =>
+            Config.Folder;
+
+        internal static bool CreateChildFolder() =>
+            Config.CreateChildFolder;
+
+        internal static void SetDirectory(string selectedPath)
+        {
+            Config.Folder = selectedPath;
+            SaveConfiguration();
+        }
+
+        internal static void SetCreateSubFolder(bool @checked)
+        {
+            Config.CreateChildFolder = @checked;
+            SaveConfiguration();
+        }
+
+        internal static void SetSelectedSuffix(string text)
+        {
+            Config.Suffix = text;
+            SaveConfiguration();
         }
     }
 }

@@ -36,6 +36,8 @@
             this.TextBox_Directory = new System.Windows.Forms.TextBox();
             this.Label_Suffix = new System.Windows.Forms.Label();
             this.Label_SaveDirectory = new System.Windows.Forms.Label();
+            this.CheckBox_SubFolder = new System.Windows.Forms.CheckBox();
+            this.Label_CreateSubFolder = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.Settings_Tab.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +49,7 @@
             this.TabControl.Location = new System.Drawing.Point(12, 12);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(465, 92);
+            this.TabControl.Size = new System.Drawing.Size(465, 109);
             this.TabControl.TabIndex = 0;
             // 
             // Action_Tab
@@ -62,6 +64,8 @@
             // 
             // Settings_Tab
             // 
+            this.Settings_Tab.Controls.Add(this.Label_CreateSubFolder);
+            this.Settings_Tab.Controls.Add(this.CheckBox_SubFolder);
             this.Settings_Tab.Controls.Add(this.Button_SelectDirectory);
             this.Settings_Tab.Controls.Add(this.ComboBox_Suffix);
             this.Settings_Tab.Controls.Add(this.TextBox_Directory);
@@ -70,7 +74,7 @@
             this.Settings_Tab.Location = new System.Drawing.Point(4, 22);
             this.Settings_Tab.Name = "Settings_Tab";
             this.Settings_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Settings_Tab.Size = new System.Drawing.Size(457, 66);
+            this.Settings_Tab.Size = new System.Drawing.Size(457, 83);
             this.Settings_Tab.TabIndex = 1;
             this.Settings_Tab.Text = "Settings";
             this.Settings_Tab.UseVisualStyleBackColor = true;
@@ -83,6 +87,7 @@
             this.Button_SelectDirectory.TabIndex = 4;
             this.Button_SelectDirectory.Text = "Select Directory";
             this.Button_SelectDirectory.UseVisualStyleBackColor = true;
+            this.Button_SelectDirectory.Click += new System.EventHandler(this.Button_SelectDirectory_Click);
             // 
             // ComboBox_Suffix
             // 
@@ -91,6 +96,7 @@
             this.ComboBox_Suffix.Name = "ComboBox_Suffix";
             this.ComboBox_Suffix.Size = new System.Drawing.Size(250, 21);
             this.ComboBox_Suffix.TabIndex = 3;
+            this.ComboBox_Suffix.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Suffix_SelectedIndexChanged);
             // 
             // TextBox_Directory
             // 
@@ -98,6 +104,7 @@
             this.TextBox_Directory.Name = "TextBox_Directory";
             this.TextBox_Directory.Size = new System.Drawing.Size(362, 20);
             this.TextBox_Directory.TabIndex = 2;
+            this.TextBox_Directory.TextChanged += new System.EventHandler(this.TextBox_Directory_TextChanged);
             // 
             // Label_Suffix
             // 
@@ -118,11 +125,31 @@
             this.Label_SaveDirectory.TabIndex = 0;
             this.Label_SaveDirectory.Text = "Save Directory:";
             // 
+            // CheckBox_SubFolder
+            // 
+            this.CheckBox_SubFolder.AutoSize = true;
+            this.CheckBox_SubFolder.Location = new System.Drawing.Point(89, 57);
+            this.CheckBox_SubFolder.Name = "CheckBox_SubFolder";
+            this.CheckBox_SubFolder.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CheckBox_SubFolder.Size = new System.Drawing.Size(15, 14);
+            this.CheckBox_SubFolder.TabIndex = 5;
+            this.CheckBox_SubFolder.UseVisualStyleBackColor = true;
+            this.CheckBox_SubFolder.CheckedChanged += new System.EventHandler(this.CheckBox_SubFolder_CheckedChanged);
+            // 
+            // Label_CreateSubFolder
+            // 
+            this.Label_CreateSubFolder.AutoSize = true;
+            this.Label_CreateSubFolder.Location = new System.Drawing.Point(17, 57);
+            this.Label_CreateSubFolder.Name = "Label_CreateSubFolder";
+            this.Label_CreateSubFolder.Size = new System.Drawing.Size(66, 13);
+            this.Label_CreateSubFolder.TabIndex = 6;
+            this.Label_CreateSubFolder.Text = "Sub Folders:";
+            // 
             // ClipboardToScreenshot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 113);
+            this.ClientSize = new System.Drawing.Size(489, 133);
             this.Controls.Add(this.TabControl);
             this.Name = "ClipboardToScreenshot";
             this.Text = "Clipboard to Screenshot";
@@ -144,6 +171,8 @@
         private System.Windows.Forms.TextBox TextBox_Directory;
         private System.Windows.Forms.Label Label_Suffix;
         private System.Windows.Forms.Label Label_SaveDirectory;
+        private System.Windows.Forms.Label Label_CreateSubFolder;
+        private System.Windows.Forms.CheckBox CheckBox_SubFolder;
     }
 }
 
