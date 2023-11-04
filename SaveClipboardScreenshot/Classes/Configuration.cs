@@ -21,9 +21,11 @@ namespace SaveClipboardScreenshot.Classes
 
         internal static void SaveConfiguration()
         {
+            Logging.ChangeStatusText("Saving configuration file...");
             string configurationFilePath = ConfigurationFilePath();
             string configurationFileContent = Newtonsoft.Json.JsonConvert.SerializeObject(Config, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(configurationFilePath, configurationFileContent);
+            Logging.ChangeStatusText("Ready");
         }
 
         internal static void OpenConfigurationFileInNotepad()
@@ -50,6 +52,7 @@ namespace SaveClipboardScreenshot.Classes
 
         internal static void SetDirectory(string selectedPath)
         {
+            if (string.IsNullOrEmpty(selectedPath)) { return; }
             Config.Folder = selectedPath;
             SaveConfiguration();
         }

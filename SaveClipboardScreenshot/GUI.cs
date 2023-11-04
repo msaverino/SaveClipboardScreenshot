@@ -13,9 +13,12 @@ namespace SaveClipboardScreenshot
 {
     public partial class ClipboardToScreenshot : Form
     {
+
         public ClipboardToScreenshot()
         {
             InitializeComponent();
+            // When the status text changes, update the label.
+            Logging.StatusTextChanged += (s, e) => ToolStripStatusLabel.Text = Logging.StatusText;
         }
 
         private void Label_Suffix_DoubleClick(object sender, EventArgs e)
@@ -27,6 +30,10 @@ namespace SaveClipboardScreenshot
         {
             Configuration.LoadConfiguration();
             Settings.InitialLoad(TextBox_Directory, ComboBox_Suffix, CheckBox_SubFolder);
+            // Now the form is loaded, we can now add the events for changed.
+            TextBox_Directory.TextChanged += TextBox_Directory_TextChanged;
+            ComboBox_Suffix.SelectedIndexChanged += ComboBox_Suffix_SelectedIndexChanged;
+            CheckBox_SubFolder.CheckedChanged += CheckBox_SubFolder_CheckedChanged;
         }
 
         private void Button_SelectDirectory_Click(object sender, EventArgs e)

@@ -13,9 +13,11 @@ namespace SaveClipboardScreenshot.Classes
 
         internal static void InitialLoad(TextBox directory, ComboBox suffix, CheckBox subFolder)
         {
+            Logging.ChangeStatusText("Reading configuration file...");
             LoadDirectoryTextBox(directory);
             LoadSuffixDropDown(suffix);
             LoadSubFolderCheckBox(subFolder);
+            Logging.ChangeStatusText("Ready");
         }
 
         private static void LoadSubFolderCheckBox(CheckBox subFolder) =>

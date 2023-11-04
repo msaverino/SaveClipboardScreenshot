@@ -38,8 +38,15 @@
             this.Label_SaveDirectory = new System.Windows.Forms.Label();
             this.CheckBox_SubFolder = new System.Windows.Forms.CheckBox();
             this.Label_CreateSubFolder = new System.Windows.Forms.Label();
+            this.Label_Prefix = new System.Windows.Forms.Label();
+            this.TextBox_Prefix = new System.Windows.Forms.TextBox();
+            this.Button_Save = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.TabControl.SuspendLayout();
+            this.Action_Tab.SuspendLayout();
             this.Settings_Tab.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -54,10 +61,13 @@
             // 
             // Action_Tab
             // 
+            this.Action_Tab.Controls.Add(this.Button_Save);
+            this.Action_Tab.Controls.Add(this.TextBox_Prefix);
+            this.Action_Tab.Controls.Add(this.Label_Prefix);
             this.Action_Tab.Location = new System.Drawing.Point(4, 22);
             this.Action_Tab.Name = "Action_Tab";
             this.Action_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Action_Tab.Size = new System.Drawing.Size(457, 66);
+            this.Action_Tab.Size = new System.Drawing.Size(457, 83);
             this.Action_Tab.TabIndex = 0;
             this.Action_Tab.Text = "Action";
             this.Action_Tab.UseVisualStyleBackColor = true;
@@ -96,7 +106,6 @@
             this.ComboBox_Suffix.Name = "ComboBox_Suffix";
             this.ComboBox_Suffix.Size = new System.Drawing.Size(250, 21);
             this.ComboBox_Suffix.TabIndex = 3;
-            this.ComboBox_Suffix.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Suffix_SelectedIndexChanged);
             // 
             // TextBox_Directory
             // 
@@ -104,7 +113,6 @@
             this.TextBox_Directory.Name = "TextBox_Directory";
             this.TextBox_Directory.Size = new System.Drawing.Size(362, 20);
             this.TextBox_Directory.TabIndex = 2;
-            this.TextBox_Directory.TextChanged += new System.EventHandler(this.TextBox_Directory_TextChanged);
             // 
             // Label_Suffix
             // 
@@ -134,7 +142,6 @@
             this.CheckBox_SubFolder.Size = new System.Drawing.Size(15, 14);
             this.CheckBox_SubFolder.TabIndex = 5;
             this.CheckBox_SubFolder.UseVisualStyleBackColor = true;
-            this.CheckBox_SubFolder.CheckedChanged += new System.EventHandler(this.CheckBox_SubFolder_CheckedChanged);
             // 
             // Label_CreateSubFolder
             // 
@@ -145,19 +152,66 @@
             this.Label_CreateSubFolder.TabIndex = 6;
             this.Label_CreateSubFolder.Text = "Sub Folders:";
             // 
+            // Label_Prefix
+            // 
+            this.Label_Prefix.AutoSize = true;
+            this.Label_Prefix.Location = new System.Drawing.Point(6, 3);
+            this.Label_Prefix.Name = "Label_Prefix";
+            this.Label_Prefix.Size = new System.Drawing.Size(36, 13);
+            this.Label_Prefix.TabIndex = 0;
+            this.Label_Prefix.Text = "Prefix:";
+            // 
+            // TextBox_Prefix
+            // 
+            this.TextBox_Prefix.Location = new System.Drawing.Point(9, 19);
+            this.TextBox_Prefix.Name = "TextBox_Prefix";
+            this.TextBox_Prefix.Size = new System.Drawing.Size(442, 20);
+            this.TextBox_Prefix.TabIndex = 1;
+            // 
+            // Button_Save
+            // 
+            this.Button_Save.Location = new System.Drawing.Point(9, 45);
+            this.Button_Save.Name = "Button_Save";
+            this.Button_Save.Size = new System.Drawing.Size(442, 32);
+            this.Button_Save.TabIndex = 2;
+            this.Button_Save.Text = "Save Screenshot from Clipboard";
+            this.Button_Save.UseVisualStyleBackColor = true;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 129);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(489, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // ToolStripStatusLabel
+            // 
+            this.ToolStripStatusLabel.Name = "ToolStripStatusLabel";
+            this.ToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.ToolStripStatusLabel.Text = "toolStripStatusLabel1";
+            // 
             // ClipboardToScreenshot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 133);
+            this.ClientSize = new System.Drawing.Size(489, 151);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.TabControl);
             this.Name = "ClipboardToScreenshot";
             this.Text = "Clipboard to Screenshot";
             this.Load += new System.EventHandler(this.ClipboardToScreenshot_Load);
             this.TabControl.ResumeLayout(false);
+            this.Action_Tab.ResumeLayout(false);
+            this.Action_Tab.PerformLayout();
             this.Settings_Tab.ResumeLayout(false);
             this.Settings_Tab.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,6 +227,11 @@
         private System.Windows.Forms.Label Label_SaveDirectory;
         private System.Windows.Forms.Label Label_CreateSubFolder;
         private System.Windows.Forms.CheckBox CheckBox_SubFolder;
+        private System.Windows.Forms.Button Button_Save;
+        private System.Windows.Forms.TextBox TextBox_Prefix;
+        private System.Windows.Forms.Label Label_Prefix;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel;
     }
 }
 
