@@ -15,9 +15,14 @@ This JSON configuration file is used for specifying the directory and file namin
 ```json
 {
   "Folder": "C:\\Users\\Public\\Documents\\",
+  "CreateChildFolder": true,
   "Suffix": "Increment"
 }
 ```
+
+## CreateChildFolder option
+
+- **CreateChildFolder**: If this option is set to true, a child folder will be created in the specified directory. The name of the child folder will be the prefix designated within the GUI.
 
 ## Suffix Configuration File Options
 - **Increment**: The file name will be incremented by 1 each time a file is saved.
