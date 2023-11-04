@@ -22,5 +22,10 @@ namespace SaveClipboardScreenshot
         {
             Documentation.OpenConfigurationPage();
         }
+
+        private void ClipboardToScreenshot_Load(object sender, EventArgs e)
+        {
+            Configuration.LoadConfiguration();
+        }
     }
 }

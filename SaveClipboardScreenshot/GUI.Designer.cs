@@ -126,6 +126,7 @@
             this.Controls.Add(this.TabControl);
             this.Name = "ClipboardToScreenshot";
             this.Text = "Clipboard to Screenshot";
+            this.Load += new System.EventHandler(this.ClipboardToScreenshot_Load);
             this.TabControl.ResumeLayout(false);
             this.Settings_Tab.ResumeLayout(false);
             this.Settings_Tab.PerformLayout();
