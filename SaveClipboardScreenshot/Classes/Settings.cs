@@ -9,7 +9,7 @@ namespace SaveClipboardScreenshot.Classes
 {
     internal class Settings
     {
-        private static readonly string[] Options = { "Increment", "Date", "Date and Time", "Random", "Custom" };
+        private static readonly string[] Options = { "Increment", "Date", "Time", "Date and Time", "Random", "Custom" };
 
         internal static void InitialLoad(TextBox directory, ComboBox suffix, CheckBox subFolder)
         {

@@ -55,5 +55,10 @@ namespace SaveClipboardScreenshot
         {
             Configuration.SetSelectedSuffix(ComboBox_Suffix.Text);
         }
+
+        private void Button_Save_Click(object sender, EventArgs e)
+        {
+            SaveScreenshot.Save(TextBox_Prefix.Text, CheckBox_SubFolder.Checked);
+        }
     }
 }

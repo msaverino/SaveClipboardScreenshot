@@ -27,6 +27,7 @@ This JSON configuration file is used for specifying the directory and file namin
 ## Suffix Configuration File Options
 - **Increment**: The file name will be incremented by 1 each time a file is saved.
 - **Date**: The file name will be the current date.
+- **Time**: The file name will be the current time.
 - **DateTime**: The file name will be the current date and time.
 - **Random**: The file name will be a random string of characters.
 - **Custom**: The file name will be a custom string of characters.

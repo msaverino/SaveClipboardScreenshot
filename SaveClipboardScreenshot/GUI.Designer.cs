@@ -30,17 +30,17 @@
         {
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Action_Tab = new System.Windows.Forms.TabPage();
+            this.Button_Save = new System.Windows.Forms.Button();
+            this.TextBox_Prefix = new System.Windows.Forms.TextBox();
+            this.Label_Prefix = new System.Windows.Forms.Label();
             this.Settings_Tab = new System.Windows.Forms.TabPage();
+            this.Label_CreateSubFolder = new System.Windows.Forms.Label();
+            this.CheckBox_SubFolder = new System.Windows.Forms.CheckBox();
             this.Button_SelectDirectory = new System.Windows.Forms.Button();
             this.ComboBox_Suffix = new System.Windows.Forms.ComboBox();
             this.TextBox_Directory = new System.Windows.Forms.TextBox();
             this.Label_Suffix = new System.Windows.Forms.Label();
             this.Label_SaveDirectory = new System.Windows.Forms.Label();
-            this.CheckBox_SubFolder = new System.Windows.Forms.CheckBox();
-            this.Label_CreateSubFolder = new System.Windows.Forms.Label();
-            this.Label_Prefix = new System.Windows.Forms.Label();
-            this.TextBox_Prefix = new System.Windows.Forms.TextBox();
-            this.Button_Save = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.TabControl.SuspendLayout();
@@ -72,6 +72,32 @@
             this.Action_Tab.Text = "Action";
             this.Action_Tab.UseVisualStyleBackColor = true;
             // 
+            // Button_Save
+            // 
+            this.Button_Save.Location = new System.Drawing.Point(9, 45);
+            this.Button_Save.Name = "Button_Save";
+            this.Button_Save.Size = new System.Drawing.Size(442, 32);
+            this.Button_Save.TabIndex = 2;
+            this.Button_Save.Text = "Save Screenshot from Clipboard";
+            this.Button_Save.UseVisualStyleBackColor = true;
+            this.Button_Save.Click += new System.EventHandler(this.Button_Save_Click);
+            // 
+            // TextBox_Prefix
+            // 
+            this.TextBox_Prefix.Location = new System.Drawing.Point(9, 19);
+            this.TextBox_Prefix.Name = "TextBox_Prefix";
+            this.TextBox_Prefix.Size = new System.Drawing.Size(442, 20);
+            this.TextBox_Prefix.TabIndex = 1;
+            // 
+            // Label_Prefix
+            // 
+            this.Label_Prefix.AutoSize = true;
+            this.Label_Prefix.Location = new System.Drawing.Point(6, 3);
+            this.Label_Prefix.Name = "Label_Prefix";
+            this.Label_Prefix.Size = new System.Drawing.Size(36, 13);
+            this.Label_Prefix.TabIndex = 0;
+            this.Label_Prefix.Text = "Prefix:";
+            // 
             // Settings_Tab
             // 
             this.Settings_Tab.Controls.Add(this.Label_CreateSubFolder);
@@ -88,6 +114,25 @@
             this.Settings_Tab.TabIndex = 1;
             this.Settings_Tab.Text = "Settings";
             this.Settings_Tab.UseVisualStyleBackColor = true;
+            // 
+            // Label_CreateSubFolder
+            // 
+            this.Label_CreateSubFolder.AutoSize = true;
+            this.Label_CreateSubFolder.Location = new System.Drawing.Point(17, 57);
+            this.Label_CreateSubFolder.Name = "Label_CreateSubFolder";
+            this.Label_CreateSubFolder.Size = new System.Drawing.Size(66, 13);
+            this.Label_CreateSubFolder.TabIndex = 6;
+            this.Label_CreateSubFolder.Text = "Sub Folders:";
+            // 
+            // CheckBox_SubFolder
+            // 
+            this.CheckBox_SubFolder.AutoSize = true;
+            this.CheckBox_SubFolder.Location = new System.Drawing.Point(89, 57);
+            this.CheckBox_SubFolder.Name = "CheckBox_SubFolder";
+            this.CheckBox_SubFolder.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CheckBox_SubFolder.Size = new System.Drawing.Size(15, 14);
+            this.CheckBox_SubFolder.TabIndex = 5;
+            this.CheckBox_SubFolder.UseVisualStyleBackColor = true;
             // 
             // Button_SelectDirectory
             // 
@@ -132,50 +177,6 @@
             this.Label_SaveDirectory.Size = new System.Drawing.Size(80, 13);
             this.Label_SaveDirectory.TabIndex = 0;
             this.Label_SaveDirectory.Text = "Save Directory:";
-            // 
-            // CheckBox_SubFolder
-            // 
-            this.CheckBox_SubFolder.AutoSize = true;
-            this.CheckBox_SubFolder.Location = new System.Drawing.Point(89, 57);
-            this.CheckBox_SubFolder.Name = "CheckBox_SubFolder";
-            this.CheckBox_SubFolder.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CheckBox_SubFolder.Size = new System.Drawing.Size(15, 14);
-            this.CheckBox_SubFolder.TabIndex = 5;
-            this.CheckBox_SubFolder.UseVisualStyleBackColor = true;
-            // 
-            // Label_CreateSubFolder
-            // 
-            this.Label_CreateSubFolder.AutoSize = true;
-            this.Label_CreateSubFolder.Location = new System.Drawing.Point(17, 57);
-            this.Label_CreateSubFolder.Name = "Label_CreateSubFolder";
-            this.Label_CreateSubFolder.Size = new System.Drawing.Size(66, 13);
-            this.Label_CreateSubFolder.TabIndex = 6;
-            this.Label_CreateSubFolder.Text = "Sub Folders:";
-            // 
-            // Label_Prefix
-            // 
-            this.Label_Prefix.AutoSize = true;
-            this.Label_Prefix.Location = new System.Drawing.Point(6, 3);
-            this.Label_Prefix.Name = "Label_Prefix";
-            this.Label_Prefix.Size = new System.Drawing.Size(36, 13);
-            this.Label_Prefix.TabIndex = 0;
-            this.Label_Prefix.Text = "Prefix:";
-            // 
-            // TextBox_Prefix
-            // 
-            this.TextBox_Prefix.Location = new System.Drawing.Point(9, 19);
-            this.TextBox_Prefix.Name = "TextBox_Prefix";
-            this.TextBox_Prefix.Size = new System.Drawing.Size(442, 20);
-            this.TextBox_Prefix.TabIndex = 1;
-            // 
-            // Button_Save
-            // 
-            this.Button_Save.Location = new System.Drawing.Point(9, 45);
-            this.Button_Save.Name = "Button_Save";
-            this.Button_Save.Size = new System.Drawing.Size(442, 32);
-            this.Button_Save.TabIndex = 2;
-            this.Button_Save.Text = "Save Screenshot from Clipboard";
-            this.Button_Save.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
